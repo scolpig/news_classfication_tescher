@@ -31,7 +31,7 @@ for i in range(6):
     df_titles = pd.concat([df_titles, df_section_titles], axis='rows', ignore_index=True)
 print(df_titles)
 print(df_titles.category.value_counts())
-df_titles.to_csv('./crawlind_data/naver_headline_news_{}.csv'.format(
+df_titles.to_csv('./crawling_data/naver_headline_news_{}.csv'.format(
     datetime.datetime.now().strftime('%Y%m%d')), index=False)
 
 
