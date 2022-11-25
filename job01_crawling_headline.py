@@ -26,7 +26,7 @@ for i in range(6):
         title = title_tag.text
         title = re.compile('[^가-힣 ]').sub(' ', title)
         titles.append(title)
-    df_section_titles = pd.DataFrame(titles, columns=['titles'])
+    df_section_titles = pd.DataFrame(titles, columns=['title'])
     df_section_titles['category'] = category[i]
     df_titles = pd.concat([df_titles, df_section_titles], axis='rows', ignore_index=True)
 print(df_titles)

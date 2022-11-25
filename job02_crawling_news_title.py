@@ -30,10 +30,13 @@ for i in range(0, 6):      # section
                     title = re.compile('[^가-힣 ]').sub(' ', title)
                     titles.append(title)
                 except NoSuchElementException as e:
-                    x_path = '//*[@id="section_body"]/ul[{}]/li[{}]/dl/dt/a'.format(k, l)
-                    title = driver.find_element('xpath', x_path).text
-                    title = re.compile('[^가-힣 ]').sub(' ', title)
-                    titles.append(title)
+                    try:
+                        x_path = '//*[@id="section_body"]/ul[{}]/li[{}]/dl/dt/a'.format(k, l)
+                        title = driver.find_element('xpath', x_path).text
+                        title = re.compile('[^가-힣 ]').sub(' ', title)
+                        titles.append(title)
+                    except:
+                        print('error', i, j, k, l)
                 except:
                     print('error', i, j, k ,l)
         if j % 10 == 0:
