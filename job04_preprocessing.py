@@ -8,7 +8,7 @@ from sklearn.preprocessing import LabelEncoder
 from keras.utils.np_utils import to_categorical
 import pickle
 pd.set_option('display.unicode.east_asian_width', True)
-df = pd.read_csv('./crawling_data/naver_news_titles_20221124.csv')
+df = pd.read_csv('./crawling_data/naver_news_titles_20221129.csv')
 print(df.head(10))
 print(df.category.value_counts())
 df.info()
