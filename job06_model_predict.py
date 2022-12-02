@@ -42,7 +42,7 @@ for i in range(len(tokened_X)):
         tokened_X[i] = tokened_X[i][:20]
 X_pad = pad_sequences(tokened_X, 20)
 
-model = load_model('./models/news_category_classfication_model_0.995.h5')
+model = load_model('./models/news_category_classfication_model_0.691.h5')
 preds = model.predict(X_pad)
 label = encoder.classes_
 category_preds = []
